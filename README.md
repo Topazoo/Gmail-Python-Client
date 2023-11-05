@@ -5,6 +5,12 @@ https://developers.google.com/identity/protocols/oauth2
 
 ## Configuring a new project
 
+### Installing
+
+```sh
+pip install gmail-python-client
+```
+
 ### Google Cloud Configuration
 
 1. Visit: https://console.cloud.google.com/apis/credentials while logged in to your Gmail Account
@@ -27,7 +33,7 @@ https://developers.google.com/identity/protocols/oauth2
 Once you have a 24hour access token from the API Playground or a more permanenent combination of a Client ID, Client Secret and Refresh Token, you can use this library like so:
 
 ```python
-from gmail_python_client.gmail_client import GmailClient
+from gmail_python_client import GmailClient
 
 # Configure with Access Token
 # Looks like:
@@ -43,7 +49,7 @@ if __name__ == '__main__':
 ```
 
 ```python
-from gmail_python_client.gmail_client import GmailClient
+from gmail_python_client import GmailClient
 
 # Configure with Refresh Token
 # Looks like:
