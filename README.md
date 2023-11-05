@@ -7,9 +7,9 @@ https://developers.google.com/identity/protocols/oauth2
 
 ### Google Cloud Configuration
 
-1. Visit: https://console.cloud.google.com/apis/credentials
-1. Create a new project
-1. Visit: https://console.developers.google.com/start/api?id=gmail
+1. Visit: https://console.cloud.google.com/apis/credentials while logged in to your Gmail Account
+1. Create a new project for your application that is to send emails
+1. Visit: https://console.developers.google.com/start/api?id=gmail to enable Gmail
 1. Configure the OAuth consent screen: https://console.cloud.google.com/projectselector2/apis/credentials/consent?supportedpurview=project
 1. Ensure the `https://www.googleapis.com/auth/gmail.send` scope is enabled
 1. Create OAuth 2.0 credentials (select "Web application" as the application type) and save the JSON data
