@@ -47,8 +47,5 @@ jobs:
           Release ${{ env.VERSION }} of Gmail-Python-Client :tada:
       
           [View on PyPI](https://pypi.org/project/Gmail-Python-Client/${{ env.VERSION }}/)
-
-          **Changelog:**
-          ${{ steps.get_commits.outputs.commits }}
         draft: false
         prerelease: false
