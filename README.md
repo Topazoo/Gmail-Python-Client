@@ -77,6 +77,8 @@ export GMAIL_OAUTH_ACCESS_TOKEN="ya29.a0AfB_byDzLjqCbsdb_RMnguTrB8fmdSEsOSMkvWH6
 ```
 
 ```python
+from gmail_python_client import GmailClient
+
 if __name__ == '__main__':
     # Send the email to pswanson@ucdavis.edu
     GmailClient().send_email("pswanson@ucdavis.edu", "Test", "Hello World!")
@@ -86,11 +88,13 @@ if __name__ == '__main__':
 # Configure with Refresh Token
 export GMAIL_SENDER_EMAIL_ADDRESS="my_sender_email@gmail.com"
 export GMAIL_OAUTH_REFRESH_TOKEN="1//04mDFqbnpQnGTCgYIARAAGAQSNwF-L9IruAAqiKvHXfHzZnMt6UqTzDOZGg4TJha3oCGa9utu_PwxfrmG-su47Qytt8m2eWDDwZo"
-export GMAIL_OAUTH_CLIENT_ID="My-Client-ID"
-export GMAIL_OAUTH_CLIENT_SECRET="My-Client-Secret-Key"
+export GMAIL_OAUTH_CLIENT_ID="MyClientID.apps.googleusercontent.com"
+export GMAIL_OAUTH_CLIENT_SECRET="GOCYYW-J2krl75t71RhZdZmmB-bSRX52lhJ"
 ```
 
 ```python
+from gmail_python_client import GmailClient
+
 if __name__ == '__main__':
     # Send the email to pswanson@ucdavis.edu
     GmailClient().send_email("pswanson@ucdavis.edu", "Test", "Hello World!")
