@@ -17,18 +17,22 @@ class GmailClient(EmailClient):
     ''' Client to send emails via the GMail API 
     
         Requires the following environmental variables or arguments:
-
+        sender_email_address (env: `GMAIL_SENDER_EMAIL_ADDRESS`) - The email address being used to send emails
+        access_token (env: `GMAIL_OAUTH_ACCESS_TOKEN`) - A Google OAuth Access Token
+        refresh_token (env: `GMAIL_OAUTH_REFRESH_TOKEN`) - A Google OAuth Refresh Token
+        client_id (env: `GMAIL_OAUTH_CLIENT_ID`) - A Google OAuth Client ID
+        client_secret (env: `GMAIL_OAUTH_CLIENT_SECRET`) - A Google OAuth Client Secret Key
     '''
 
     def __init__(self,
-            sender_email_address:str,
+            sender_email_address:Optional[str]=None,
             access_token:Optional[str]=None,
             refresh_token:Optional[str]=None,
             client_id:Optional[str]=None,
             client_secret:Optional[str]=None,
         ) -> None:
     
-        super().__init__(sender_email_address=sender_email_address)
+        super().__init__(sender_email_address=sender_email_address or os.environ.get('GMAIL_SENDER_EMAIL_ADDRESS'))
         # Store credentials if passed or read from env
         self.access_token = access_token or os.environ.get('GMAIL_OAUTH_ACCESS_TOKEN')
         self.refresh_token = refresh_token or os.environ.get('GMAIL_OAUTH_REFRESH_TOKEN')

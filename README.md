@@ -65,3 +65,33 @@ if __name__ == '__main__':
     # Send the email to pswanson@ucdavis.edu
     c.send_email("pswanson@ucdavis.edu", "Test", "Hello World!")
 ```
+
+### Configuring via the Environment
+
+You can configure the client using environmental variables rather than passing the configuration to the constructor:
+
+```sh
+# Configure with Access Token
+export GMAIL_SENDER_EMAIL_ADDRESS="my_sender_email@gmail.com"
+export GMAIL_OAUTH_ACCESS_TOKEN="ya29.a0AfB_byDzLjqCbsdb_RMnguTrB8fmdSEsOSMkvWH6zjcm-1UIi3cdNpfvhZUjYZLVB7NrnNGJIEEatntXjBpc5Bk_cIGKgnjqtesO-HLT0H2Yiz-lZFviz3_UfaaoR8HLjmrKmm7VCkBZvdI0ABb4ADnY9fEKxcLMhR4daCgYKAQcSARASFQGOcNnCvZ0k13Q_KYFObZFjh5umXQ0171"
+```
+
+```python
+if __name__ == '__main__':
+    # Send the email to pswanson@ucdavis.edu
+    GmailClient().send_email("pswanson@ucdavis.edu", "Test", "Hello World!")
+```
+
+```sh
+# Configure with Refresh Token
+export GMAIL_SENDER_EMAIL_ADDRESS="my_sender_email@gmail.com"
+export GMAIL_OAUTH_REFRESH_TOKEN="1//04mDFqbnpQnGTCgYIARAAGAQSNwF-L9IruAAqiKvHXfHzZnMt6UqTzDOZGg4TJha3oCGa9utu_PwxfrmG-su47Qytt8m2eWDDwZo"
+export GMAIL_OAUTH_CLIENT_ID="My-Client-ID"
+export GMAIL_OAUTH_CLIENT_SECRET="My-Client-Secret-Key"
+```
+
+```python
+if __name__ == '__main__':
+    # Send the email to pswanson@ucdavis.edu
+    GmailClient().send_email("pswanson@ucdavis.edu", "Test", "Hello World!")
+```
