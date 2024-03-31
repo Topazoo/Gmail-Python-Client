@@ -27,6 +27,7 @@ pip install gmail-python-client
 1. Also, make sure the checkbox "Auto-refresh the token before it expires" is unchecked, because you need the refresh token to be able to generate new access tokens in your application.
 1. Click "Exchange authorization code for tokens" to get your access token and refresh token.
 1. (Note:) You can use the API Playground to generate an access token without creating an OAuth2.0 client ID directly, but it will only last 24 hours
+1. (Note:) If you experience permissions issues when authenticating through the Google OAuth Consent screen, you may need to "publish" your app, or make it "external" on the OAuth Consent Screen configuration: https://console.cloud.google.com/projectselector2/apis/credentials/consent?supportedpurview=project
 
 ### Application Configuration
 
